@@ -9,12 +9,23 @@ var user = {
 };
 
 var addDrink = function() {
+  updateBac();
+};
+
+var updateBac = function() {
 
 };
 
+var updateMeta = function() {
+
+};
+
+//This function checks if you are under the legal limit to driveCheck
 
 var driveCheck = function() {
-
+  if (user.userBac <= .08) {
+    return true
+  }
 };
 
 
