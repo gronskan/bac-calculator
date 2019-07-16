@@ -2,31 +2,43 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <script src="https://code.jquery.com/jquery-3.4.1.js"
-    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-    crossorigin="anonymous"></script>
+    <script src="js/jquery-3.4.1.js"></script>
     <script src="js/scripts.js"></script>
-    <title>bac-calculator</title>
-  </head>
+    <title>BAC Claculator</title>
+</head>
+
+
   <body>
-    <div class=container>
-      <form id=user-info>
-        <div class=form-group>
-          <label for="name">Name</label>
-          <input id="userName" type="text">
+    <div class ="container">
+    <h1>BAC Calculator </h1>
+      <form>
+          <div class="form-group">
+            <label for="new-name">First Name</label>
+              <input type="text"  class="form-control" id="new-first-name">
+            </div>
+            <div class="">
+              <label for="new-height">Height</label>
+              <input type="number"  class="form-control" id="new-last-name">
+            </div>
+            <div class="form-group">
+              <label for="new-weight">Weight</label>
+              <input type="number"  class="form-control" id="new-weight">
+            </div>
+            <label >Gender</label><br>
+            <select id="gender" name="gender">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select><br><br>
+
+            <button type="submit" class="btn-primary">Submit Record</button>
+
+
+          </form>
+
         </div>
-        <div class=form-group>
-          <label for="height">Height</label>
-          <input id="userHeight" type="text">
-        </div>
-        <div class=form-group>
-          <label for="weight">Weight</label>
-          <input id="weight" type="text">
-        </div>
-        <button type="submit">Submit</button>
-      </form>
-    </div>
+
+
   </body>
 </html>
