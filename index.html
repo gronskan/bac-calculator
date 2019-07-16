@@ -2,9 +2,31 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+    <title>bac-calculator</title>
   </head>
   <body>
-
+    <div class=container>
+      <form id=user-info>
+        <div class=form-group>
+          <label for="name">Name</label>
+          <input id="userName" type="text">
+        </div>
+        <div class=form-group>
+          <label for="height">Height</label>
+          <input id="userHeight" type="text">
+        </div>
+        <div class=form-group>
+          <label for="weight">Weight</label>
+          <input id="weight" type="text">
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
   </body>
 </html>
