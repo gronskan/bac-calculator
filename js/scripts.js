@@ -1,4 +1,4 @@
-//Backend UI
+// // Backend UI
 
 var user = {
   userName: "user",
@@ -30,19 +30,16 @@ var driveCheck = function() {
 
 
 $(document).ready(function() {
-  $("#user-info").submit(function(event) {
+  $("#survey").submit(function(event) {
     event.preventDefault();
 
-    var user = {
-      userName: $("input#userName").val(),
-      userHeight: $("input#userHeight").val(),
-      userWeight: $("input#userWeight").val(),
-      userMeta: 0,
-  };
+      user.userName = $("input#new-first-name").val(),
+      user.userHeight = $("input#new-last-name").val(),
+      user.userWeight = $("input#new-weight").val(),
+      user.userMeta = 0,
+      user.userBac = 0,
 
-  $("#name").text(user.userName);
-  $("#height").text(user.userHeight);
-  $("#weight").text(user.userWeight);
+
      console.log(user)
   })
 })
