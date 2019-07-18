@@ -9,7 +9,12 @@ var user = {
   userDrinks: 0,
 };
 
-var updateTime = function(inputTime) {
+var gender = $("#gender").val();
+if (gender === "female") {
+  gender = true
+} else gender = false
+
+var updateTime = function() {
   if (inputTime > user.userTime) {
     user.userTime = inputTime;
   };
@@ -24,7 +29,7 @@ var updateBac = function() {
   };
 };
 
-//This function checks if you are under the legal limit to driveCheck
+// This function checks if you are under the legal limit to driveCheck
 
 var driveCheck = function() {
   if (user.userBac <= .08) {
@@ -38,13 +43,15 @@ $(document).ready(function() {
     event.preventDefault();
 
       user.userName = $("input#new-first-name").val(),
+      user.userFemale = gender
       user.userHeight = $("input#new-last-name").val(),
       user.userWeight = $("input#new-weight").val(),
-
+      user.userTime = $("input#firstDrinkTime").val(),
+      user.userDrinks = $("input#numberDrinks").val(),
+        
       updateBac();
       updateTime();
       driveCheck();
-
       console.log("user is" + user);
   })
 })

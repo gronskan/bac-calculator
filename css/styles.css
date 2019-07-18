@@ -1,8 +1,10 @@
-.container{
-  margin-top: 30px;
-  margin-left: 50px;
-  max-width: 600px;
-  height: 100px;
+body {
 
+  background-image: url(https://leonlogothetis.com/wp-content/uploads/2015/08/1773565.jpg);
+  background-repeat: no-repeat;
+  height: 1800px;
+  background-position: center;
+  background-size: cover;
+  position: relative;
 
 }
