@@ -1,51 +1,226 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-    <script src="js/scripts.js"></script>
-    <title>BAC Claculator</title>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Oregon County </title>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/startbootstrap-grayscale/5.0.8/js/grayscale.js"></script>
+
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/startbootstrap-grayscale/5.0.8/css/grayscale.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
+<body id="page-top">
 
-  <body>
-    <div class ="container">
-    <h1>BAC Calculator </h1>
-      <form id="survey">
-          <div class="form-group">
-            <label for="new-name">First Name</label>
-              <input type="text"  class="form-control" id="new-first-name">
-            </div>
-            <div class="">
-              <label for="new-height">Height</label>
-              <input type="number"  class="form-control" id="new-last-name">
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Oregon DMV</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#projects">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#projects">Rule book</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="masthead">
+    <div class="container d-flex h-100 align-items-center">
+      <div class="mx-auto text-left">
+        <h1 class="mx-auto my-0 text-uppercase">BAC Calculator</h1>
+        <h2 class="text-white-50 mx-auto mt-2 mb-5">Definition: Blood alcohol concentration (BAC) is the amount of alcohol in an individual's body, measured by the weight of the alcohol in a volume of blood. ... This program summarizes some of the
+          effects that may be seen based on the calculated blood alcohol concentration.</h2>
+
+        <form action="startbootstrap-grayscale-gh-pages 2/result.html">
+          <form action="/action_page.php" class="was-validated">
+            <div class="form-group">
+              <label class="text-white" for="uname">Username:</label>
+              <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname" required>
+              <div class="valid-feedback">Valid.</div>
+              <div class="invalid-feedback">Please fill out this field.</div>
             </div>
             <div class="form-group">
-              <label for="new-weight">Weight</label>
-              <input type="number"  class="form-control" id="new-weight">
-            </div>
-            <label >Gender</label><br>
-            <select id="gender" name="gender">
-              <option value="male">Male</option>
-              <option value="female">Female</option>
-            </select><br><br>
-            <div class="form-group">
-              <label for="numberDrinks">Number of Drinks</label>
-              <input type="number" class="form-control" id="numberDrinks">
+              <label class="text-white" for="height">Height:</label>
+              <input type="number" class="form-control" id="height" placeholder="Enter your Height" name="height" required>
+              <div class="valid-feedback">Valid.</div>
+              <div class="invalid-feedback">Please fill out this field.</div>
             </div>
             <div class="form-group">
-              <label for="firstDrinkTime">Minutes Since First Drink</label>
-              <input type="number" class="form-control" id="firstDrinkTime">
+              <label class="text-white" for="weight">weight:</label>
+              <input type="number" class="form-control" id="weight" placeholder="Enter your Weight" name="weight" width="30" required>
+              <div class="valid-feedback">Valid.</div>
+              <div class="invalid-feedback">Please fill out this field.</div>
             </div>
+            <div class="form-group">
+              <label class="text-white" for="drink">Number of Drinks:</label>
+              <input type="number" class="form-control" id="drinks" placeholder="Enter number of drinks you had   " name="drink" required>
+              <div class="valid-feedback">Valid.</div>
+              <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label, text-white">
+                <input type="radio" class="form-check-input" name="optradio">Male
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label, text-white">
+                <input type="radio" class="form-check-input" name="optradio">Female
+              </label>
 
-            <button type="submit" class="btn-primary">Submit Record</button>
+            </div>
+            <button type="submit" class="btn btn-primary">See your result</button>
+
+            <ul>
+              <li> you can drive </li>
+              <li> you can not drive </li>
+            </ul>
+          </form>
+      </div>
+    </div>
+  </header>
 
 
+  <!-- About Section -->
+  <section id="about" class="about-section text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2 class="text-white mb-4">Built to calculate your blood alcohol level.</h2>
+          <p class="text-white-50">blahblah
+            <a href="http://startbootstrap.com/template-overviews/grayscale/">the preview page for chart</a> </p>
+        </div>
+      </div>
+      <img src="img/image2.jpeg" class="img-fluid" alt="">
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects-section bg-light">
+    <div class="container">
+
+
+
+      <!-- Project One Row -->
+      <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+        <div class="col-lg-6">
+          <img class="img-fluid" src="img/icon1.jpg" alt="">
+        </div>
+        <div class="col-lg-6">
+          <div class="bg-black text-center h-100 project">
+            <div class="d-flex h-100">
+              <div class="project-text w-100 my-auto text-center text-lg-left">
+                <h4 class="text-white">Drinking and Driving (DUI)</h4>
+                <p class="mb-0 text-white-50">n the United States, roughly 28 people die every day in motor vehicle crashes that involve an alcohol-impaired driver. In 2014, nearly 10,000 Americans were killed in alcohol-impaired driving crashes.
+                  Alcohol-related accidents accounted for nearly one-third of all traffic-related deaths.<a href="https://www.alcoholrehabguide.org/alcohol/crimes/dui/">look here.....</a></p>
+                <hr class="d-none d-lg-block mb-0 ml-0">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Two Row -->
+      <div class="row justify-content-center no-gutters">
+        <div class="col-lg-6">
+          <img class="img-fluid" src="img/drunk1.jpg" alt="">
+        </div>
+        <div class="col-lg-6 order-lg-first">
+          <div class="bg-black text-center h-100 project">
+            <div class="d-flex h-100">
+              <div class="project-text w-100 my-auto text-center text-lg-right">
+                <h4 class="text-white"> DrivingLaw book</h4>
+                <p class="mb-0 text-white-50">Drinking alcohol leads to a loss of coordination, poor judgment, slowed reflexes, distorted vision, memory lapses, and even blackouts. Alcohol can damage every organ in your body. It is absorbed directly
+                  into your bloodstream and can increase your risk for a variety of life-threatening diseases, including cancer<a href="https://dui.drivinglaws.org/oregon.php">look here.....</a></p>
+                <hr class="d-none d-lg-block mb-0 mr-0">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Signup Section -->
+  <section id="signup" class="signup-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-lg-8 mx-auto text-center">
+
+          <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
+          <h2 class="text-white mb-5">Subscribe to receive updates!</h2>
+
+          <form class="form-inline d-flex">
+            <input type="email" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputEmail" placeholder="Enter email address...">
+            <button type="submit" class="btn btn-primary mx-auto">Subscribe</button>
           </form>
 
         </div>
+      </div>
+    </div>
+  </section>
 
-  </body>
+
+
+
+  <div class="social d-flex justify-content-center">
+    <a href="#" class="mx-2">
+      <i class="fab fa-twitter"></i>
+    </a>
+    <a href="#" class="mx-2">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="#" class="mx-2">
+      <i class="fab fa-github"></i>
+    </a>
+  </div>
+
+  </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black small text-center text-white-50">
+    <div class="container">
+      Copyright &copy; Your Website 2019
+    </div>
+  </footer>
+
+</body>
+
 </html>
