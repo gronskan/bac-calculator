@@ -3,26 +3,16 @@
 var user = {
   userName: "user",
   userFemale: true,
-  userHeight: 0,
   userWeight: 0,
   userBac: 0,
   userTime: 80,
   userDrinks: 0,
 };
 
-var drinkList = [];
-
 var gender = $("#gender").val();
 if (gender === "female") {
   gender = true
 } else gender = false
-
-// var bmi = ((user.userWeight/(user.userHeight * 12)/(user.userHeight * 12) * 703)
-
-var addDrink = function() {
-  updateBac();
-  updateTime();
-};
 
 var updateTime = function() {
   if (inputTime > user.userTime) {
@@ -32,11 +22,11 @@ var updateTime = function() {
 };
 
 var updateBac = function() {
-
-};
-
-var updateMeta = function() {
-
+  if (user.userFemale) {
+    user.userBac = ((.08 - ((user.userWeight - 100)/2000) * user.userDrinks));
+  } else {
+    user.userBac = ((.06 - ((user.userWeight - 100)/2000) * user.userDrinks));
+  };
 };
 
 // This function checks if you are under the legal limit to driveCheck
@@ -56,11 +46,12 @@ $(document).ready(function() {
       user.userFemale = gender
       user.userHeight = $("input#new-last-name").val(),
       user.userWeight = $("input#new-weight").val(),
-      user.userBac = 0,
       user.userTime = $("input#firstDrinkTime").val(),
       user.userDrinks = $("input#numberDrinks").val(),
-
-
-     console.log(user)
-  });
-});
+        
+      updateBac();
+      updateTime();
+      driveCheck();
+      console.log("user is" + user);
+  })
+})
