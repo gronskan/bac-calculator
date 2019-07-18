@@ -3,24 +3,18 @@
 var user = {
   userName: "user",
   userFemale: true,
-  userHeight: 0,
   userWeight: 0,
-  userMeta: 0,
   userBac: 0,
   userTime: 80,
   userDrinks: 0,
 };
-
-var drinkList = [];
-
-
 
 var addDrink = function() {
   updateBac();
   updateTime();
 };
 
-var updateTime = function() {
+var updateTime = function(inputTime) {
   if (inputTime > user.userTime) {
     user.userTime = inputTime;
   };
@@ -28,11 +22,12 @@ var updateTime = function() {
 };
 
 var updateBac = function() {
-
-};
-
-var updateMeta = function() {
-
+  if (user.userFemale) {
+    user.userBac = ((.08 - ((user.userWeight - 100)/2000) * user.userDrinks));
+  } else {
+    user.userBac = ((.06 - ((user.userWeight - 100)/2000) * user.userDrinks));
+  };
+  
 };
 
 //This function checks if you are under the legal limit to driveCheck
