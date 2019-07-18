@@ -2,14 +2,29 @@
 
 var user = {
   userName: "user",
+  userFemale: true,
   userHeight: 0,
   userWeight: 0,
   userMeta: 0,
   userBac: 0,
+  userTime: 80,
+  userDrinks: 0,
 };
+
+var drinkList = [];
+
+
 
 var addDrink = function() {
   updateBac();
+  updateTime();
+};
+
+var updateTime = function() {
+  if (inputTime > user.userTime) {
+    user.userTime = inputTime;
+  };
+  user.userBac = (user.userBac - ((user.userTime / 40 * 0.01)));
 };
 
 var updateBac = function() {
