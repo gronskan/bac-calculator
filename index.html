@@ -67,7 +67,7 @@
         <h2 class="text-white-50 mx-auto mt-2 mb-5">Definition: Blood alcohol concentration (BAC) is the amount of alcohol in an individual's body, measured by the weight of the alcohol in a volume of blood. ... This program summarizes some of the
           effects that may be seen based on the calculated blood alcohol concentration.</h2>
 
-        <form action="startbootstrap-grayscale-gh-pages 2/result.html">
+        <form id=survey action="startbootstrap-grayscale-gh-pages 2/result.html">
           <form action="/action_page.php" class="was-validated">
             <div class="form-group">
               <label class="text-white" for="uname">Username:</label>
@@ -90,6 +90,12 @@
             <div class="form-group">
               <label class="text-white" for="drink">Number of Drinks:</label>
               <input type="number" class="form-control" id="drinks" placeholder="Enter number of drinks you had   " name="drink" required>
+              <div class="valid-feedback">Valid.</div>
+              <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+            <div class="form-group">
+              <label class="text-white" for="time">Minutes Since First Drink:</label>
+              <input type="number" class="form-control" id="time" placeholder="Enter number of minutes since your first drink   " name="time" required>
               <div class="valid-feedback">Valid.</div>
               <div class="invalid-feedback">Please fill out this field.</div>
             </div>

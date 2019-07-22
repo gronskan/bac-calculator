@@ -42,13 +42,13 @@ $(document).ready(function() {
   $("#survey").submit(function(event) {
     event.preventDefault();
 
-      user.userName = $("input#new-first-name").val(),
+      user.userName = $("input#uname").val(),
       user.userFemale = gender
-      user.userHeight = $("input#new-last-name").val(),
-      user.userWeight = $("input#new-weight").val(),
-      user.userTime = $("input#firstDrinkTime").val(),
-      user.userDrinks = $("input#numberDrinks").val(),
-        
+      user.userHeight = $("input#height").val(),
+      user.userWeight = $("input#weight").val(),
+      user.userTime = $("input#time").val(),
+      user.userDrinks = $("input#drinks").val(),
+
       updateBac();
       updateTime();
       driveCheck();
