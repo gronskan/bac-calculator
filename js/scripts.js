@@ -15,8 +15,8 @@ if (gender === "female") {
 } else gender = false
 
 var updateTime = function() {
-  if (inputTime > user.userTime) {
-    user.userTime = inputTime;
+  if ($("input#time").val() > user.userTime) {
+    user.userTime = $("input#time").val();
   };
   user.userBac = (user.userBac - ((user.userTime / 40 * 0.01)));
 };
@@ -37,6 +37,7 @@ var driveCheck = function() {
   }
 };
 
+// // Front End UI
 
 $(document).ready(function() {
   $("#survey").submit(function(event) {
@@ -49,9 +50,17 @@ $(document).ready(function() {
       user.userTime = $("input#time").val(),
       user.userDrinks = $("input#drinks").val(),
 
-      updateBac();
-      updateTime();
-      driveCheck();
-      console.log("user is" + user);
+      // updateBac();
+      // updateTime();
+      // driveCheck();
+      console.log(user);
+
+      if (updateBac <= .08) {
+        result = $("#notok").show();
+      } else result = $("#ok").show();
+
+      $("#bac").text(user.userBac)
+      $("#survey").hide();
+
   })
 })
