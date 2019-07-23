@@ -31,6 +31,8 @@
   <!-- Custom styles for this template -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/startbootstrap-grayscale/5.0.8/css/grayscale.css" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <script src="js/scripts.js"></script>
+
 </head>
 
 <body id="page-top">
@@ -67,7 +69,7 @@
         <h2 class="text-white-50 mx-auto mt-2 mb-5">Definition: Blood alcohol concentration (BAC) is the amount of alcohol in an individual's body, measured by the weight of the alcohol in a volume of blood. ... This program summarizes some of the
           effects that may be seen based on the calculated blood alcohol concentration.</h2>
 
-
+          <form id=survey>
             <div class="form-group">
               <label class="text-white" for="uname">Username:</label>
               <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname" required>
@@ -92,6 +94,12 @@
               <div class="valid-feedback">Valid.</div>
               <div class="invalid-feedback">Please fill out this field.</div>
             </div>
+            <div class="form-group">
+              <label class="text-white" for="time">Minutes Since First Drink:</label>
+              <input type="number" class="form-control" id="time" placeholder="Enter number of minutes since your first drink   " name="time" required>
+              <div class="valid-feedback">Valid.</div>
+              <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
             <div class="form-check">
               <label class="form-check-label, text-white">
                 <input type="radio" class="form-check-input" name="optradio">Male
@@ -104,19 +112,17 @@
 
             </div>
             <button type="submit" class="btn btn-primary">See your result</button>
-
-
-            <div class="jumbotron" style = "background-image: url(https://www.abmopticians.com/wp-content/uploads/2016/10/fireworks.jpg); background-size: 90%;">
-              <h1 class="display-4">Wooohhhhhoooo</h1>
-              <p class="lead">you can drive.</p>
-              <hr class="my-4"></div>
-
-              <ul class = "text-white">
-              <li> you can drive </li>
-              <li> you can not drive </li>
-            </ul>
-
           </form>
+            <div id=ok>
+              <h2> your bac is <span id="bac"></span>. you can drive </h2>
+              <button id="reset-btn" type="button" value="Reset" onClick="location.href=location.href" class="btn-danger">Try Again!</button>
+            </div>
+            <div id=notok>
+              <h2> your bac is <span id="bac"></span>. you can not drive </h2>
+              <button id="reset-btn" type="button" value="Reset" onClick="location.href=location.href" class="btn-danger">Try Again!</button>
+            </div>
+          </form>
+        </form>
       </div>
     </div>
   </header>
