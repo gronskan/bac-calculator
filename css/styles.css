@@ -8,3 +8,11 @@ body {
   position: relative;
 
 }
+
+#ok {
+  display: none;
+}
+
+#notok {
+  display: none;
+}
