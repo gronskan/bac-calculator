@@ -8,7 +8,6 @@ var user = {
   userTime: 0,
   userDrinks: 0,
 };
-
 var updateUser = function() {
   if (document.getElementById("radioMale").checked = true) {
     user.userFemale = false;
@@ -36,11 +35,11 @@ var driveCheck = function() {
   };
 };
 
+// // Front End UI
 
 $(document).ready(function() {
   $("button#sub-button").click(function(event) {
     event.preventDefault();
-
       user.userName = $("input#userName").val(),
       user.userWeight = $("input#userWeight").val(),
       user.userTime = $("input#userTime").val(),
@@ -48,6 +47,10 @@ $(document).ready(function() {
       updateUser();
       updateBac();
       driveCheck();
-      console.log("user is" + user);
-  });
-});
+      if (updateBac <= .08) {
+        result = $("#notok").show();
+      } else result = $("#ok").show();
+      $("#bac").text(user.userBac)
+      $("#survey").hide();
+  })
+})
