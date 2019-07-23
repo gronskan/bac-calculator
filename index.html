@@ -37,7 +37,7 @@
 
 <body id="page-top">
 
-  // <!-- Navigation -->
+   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
       <a class="navbar-brand js-scroll-trigger" href="#page-top">Oregon DMV</a>
@@ -68,6 +68,8 @@
         <h1 class="mx-auto my-0 text-uppercase">Quick BAC Calculator</h1>
         <h2 class="text-white-50 mx-auto mt-2 mb-5">"Definition: Blood alcohol concentration (BAC) is the amount of alcohol in an individual's body, measured by the weight of the alcohol in a volume of blood. ... This program summarizes some of the effects that may be seen based on the calculated blood alcohol concentration."</h2>
           <form id="survey">
+
+            <!--UI for Form   -->
             <div class="form-group">
               <label class="text-white" for="userName">Name:</label>
               <input type="text" class="form-control" id="userName" placeholder="Your first name" name="uname" required>
@@ -106,13 +108,23 @@
             <button type="submit" id="sub-button" class="btn btn-primary">See your result</button>
           </form>
 
-            <div id=ok>
-              <h2> your bac is <span id="bac"></span>. you can drive </h2>
-              <button id="reset-btn" type="button" value="Reset" onClick="location.href=location.href" class="btn btn-primary">Try Again!</button>
-            </div>
 
-            <div id=notok>
+            <!-- UI for Result section  -->
+            <div id = ok>
+
+              <p> your bac is <span id="bac"></span>. you can drive </p><br>
+              <div class="fullscreen-bg">
+              <video autoplay muted loop class="fullscreen-bg_video">
+                <source src ="https://ak5.picdn.net/shutterstock/videos/6693515/preview/stock-footage-car-driving-animation-pov-stressed-driver.webm" type="video/webm">
+                </video><br>
+
+                <button id="reset-btn" type="button" value="Reset" onClick="location.href=location.href" class="btn btn-primary">Try Again!</button>
+                </div>
+
+            <div id = notok>
+
               <h2> your bac is <span id="bac"></span>. you can not drive </h2>
+              <br><br>
               <button id="reset-btn" type="button" value="Reset" onClick="location.href=location.href" class="btn btn-primary">Try Again!</button>
             </div>
 
@@ -129,10 +141,10 @@
         <div class="col-lg-8 mx-auto">
           <h2 class="text-white mb-4">Built to calculate your blood alcohol level.</h2>
           <p class="text-white-50">blahblah
-            <a href="http://startbootstrap.com/template-overviews/grayscale/">the preview page for chart</a> </p> -->
+
         </div>
       </div>
-      <img src="img/image2.jpeg" class="img-fluid" alt="">
+      <img src="https://farm9.staticflickr.com/8102/8517055964_33b7ff1626_m.jpg" class="img-fluid" size alt="">
     </div>
   </section>
 
@@ -184,7 +196,7 @@
   </section>
 
   <!-- Footer -->
-  <footer class="bg-black small text-center text-white-100">
+  <footer class="bg-black medium text-center text-white">
     <div class="container">
       Copyright &copy; Kickass Industries, LLC 2019
     </div>

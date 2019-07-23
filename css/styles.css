@@ -10,9 +10,52 @@ body {
 }
 
 #ok {
+
   display: none;
+
+}
+
+#ok{
+  color: white;
+  text-transform: capitalize;
+  font-size: 40px;;
+}
+#reset-btn{
+  font-size: 20px;
+  height:60px;
+  width:300px;
 }
 
 #notok {
   display: none;
 }
+
+#myvideo{
+  display: block;
+  height:240%;
+  right: 25%;
+  position: absolute;
+  width: 320%;
+}
+
+/* Result */
+ #bac{
+   border-radius: : 15px 50px;
+   padding: 10px;
+   width: 300px;
+   height: 100px;
+   background-color: red;
+   position: relative;
+   animation:blinkingText 10s infinite;
+   -webkit-animation-name:blinkingText; /* Safari 4.0 - 8.0 */
+
+   animation-name: blinkingText;
+
+ }
+  @keyframes blinkingText {
+    0%   {background-color:red; }
+    25%  {background-color:yellow; }
+    50%  {background-color:blue; }
+    75%  {background-color:#73AD21; }
+    100% {background-color:red; }
+  }
