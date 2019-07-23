@@ -31,13 +31,13 @@
   <!-- Custom styles for this template -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/startbootstrap-grayscale/5.0.8/css/grayscale.css" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
-  <script type="text/javascript" src="js/scripts.js">
+  <script type="text/javascript" src="js/scripts.js"></script>
 
 </head>
 
 <body id="page-top">
 
-  <!-- Navigation -->
+  // <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
       <a class="navbar-brand js-scroll-trigger" href="#page-top">Oregon DMV</a>
@@ -66,10 +66,8 @@
     <div class="container d-flex h-100 align-items-center">
       <div class="mx-auto text-left">
         <h1 class="mx-auto my-0 text-uppercase">Quick BAC Calculator</h1>
-        <h2 class="text-white-50 mx-auto mt-2 mb-5">Definition: Blood alcohol concentration (BAC) is the amount of alcohol in an individual's body, measured by the weight of the alcohol in a volume of blood. ... This program summarizes some of the
-          effects that may be seen based on the calculated blood alcohol concentration.</h2>
-
-          <form id=survey>
+        <h2 class="text-white-50 mx-auto mt-2 mb-5">"Definition: Blood alcohol concentration (BAC) is the amount of alcohol in an individual's body, measured by the weight of the alcohol in a volume of blood. ... This program summarizes some of the effects that may be seen based on the calculated blood alcohol concentration."</h2>
+          <form id="survey">
             <div class="form-group">
               <label class="text-white" for="userName">Name:</label>
               <input type="text" class="form-control" id="userName" placeholder="Your first name" name="uname" required>
@@ -89,16 +87,10 @@
               <div class="invalid-feedback">Please enter a number.</div>
             </div>
             <div class="form-group">
-              <label class="text-white" for="time">Minutes since your first drink:</label>
+              <label class="text-white" for="time">Minutes Since Your First Drink:</label>
               <input type="number" class="form-control" id="userTime" placeholder="Enter the number in minutes since you had your first drink." name="userTime" required>
               <div class="valid-feedback">Valid.</div>
               <div class="invalid-feedback">Please enter a number.</div>
-            </div>
-            <div class="form-group">
-              <label class="text-white" for="time">Minutes Since First Drink:</label>
-              <input type="number" class="form-control" id="time" placeholder="Enter number of minutes since your first drink   " name="time" required>
-              <div class="valid-feedback">Valid.</div>
-              <div class="invalid-feedback">Please fill out this field.</div>
             </div>
             <div class="form-check">
               <label class="form-check-label, text-white">
@@ -107,26 +99,28 @@
             </div>
             <div class="form-check">
               <label class="form-check-label, text-white">
-                <input type="radio" class="form-check-input" id="radioFemale" name="optradio">Female
+                <input type="radio" class="form-check-input" id="radioFemale" name="optradio">
                 Use the formula for female bodies.
               </label>
             </div>
             <button type="submit" id="sub-button" class="btn btn-primary">See your result</button>
           </form>
+
             <div id=ok>
               <h2> your bac is <span id="bac"></span>. you can drive </h2>
-              <button id="reset-btn" type="button" value="Reset" onClick="location.href=location.href" class="btn-danger">Try Again!</button>
+              <button id="reset-btn" type="button" value="Reset" onClick="location.href=location.href" class="btn btn-primary">Try Again!</button>
             </div>
+
             <div id=notok>
               <h2> your bac is <span id="bac"></span>. you can not drive </h2>
-              <button id="reset-btn" type="button" value="Reset" onClick="location.href=location.href" class="btn-danger">Try Again!</button>
+              <button id="reset-btn" type="button" value="Reset" onClick="location.href=location.href" class="btn btn-primary">Try Again!</button>
             </div>
+
           </form>
         </form>
       </div>
     </div>
   </header>
-
 
   <!-- About Section -->
   <section id="about" class="about-section text-center">
