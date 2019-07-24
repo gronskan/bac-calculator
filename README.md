@@ -4,4 +4,4 @@ This is an educational project that uses California DMV guidelines to calculate 
 
 ## Mathematical Operations
 
-Equation for determining BAC was obtained by running an exponential regression analysis on a chart from the data table provided by the California Department of Motor Vehicles (https://cadmv.wordpress.com/tag/blood-alcohol-content/). 
+Equation for determining BAC was obtained by running an exponential regression analysis on a chart from the data table provided by the California Department of Motor Vehicles (https://cadmv.wordpress.com/tag/blood-alcohol-content/).
