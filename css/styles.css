@@ -1,3 +1,20 @@
+.jumbo-header {
+  background-image: url(https://picsum.photos/id/115/1200/400);
+  background-size: cover;
+  color: white;
+}
+
+.footer {
+  text-align: center;
+  padding: 40px;
+}
+
+img {
+  max-height: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
 body {
 
 }
@@ -8,4 +25,18 @@ body {
 
 #notok {
   display: none;
+}
+
+#survey-box {
+  background-color: #e9ecef;
+}
+
+#survey {
+  margin: 20px;
+  padding: 20px;
+}
+
+#sub-button {
+  margin-top: 20px;
+  margin left: 30%;
 }

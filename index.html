@@ -7,13 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-
   <title>Quick BAC Calculator</title>
-
-  <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-  <!-- Bootstrap core JavaScript -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -24,70 +19,78 @@
 </head>
 
 <body>
+  <div class="container">
+    <div class="jumbotron jumbo-header">
+      <h1>Quick BAC Calculator</h1>
 
-        <h1>Quick BAC Calculator</h1>
-        <p>Blood alcohol concentration (BAC) is the amount of alcohol in an individual's body, measured by the weight of the alcohol in a volume of blood. ... This program summarizes some of the effects that may be seen based on the calculated blood alcohol concentration.</p>
-          <form id="survey">
-            <div class="form-group">
-              <label class="text-white" for="userName">Name:</label>
-              <input type="text" class="form-control" id="userName" placeholder="Your first name" name="uname" required>
-              <div class="valid-feedback">Valid.</div>
-              <div class="invalid-feedback">Enter your name</div>
-            </div>
-            <div class="form-group">
-              <label class="text-white" for="userWeight">Weight:</label>
-              <input type="number" class="form-control" id="userWeight" placeholder="Your weight in pounds" name="weight" width="30" required>
-              <div class="valid-feedback">Valid.</div>
-              <div class="invalid-feedback">Please enter a number</div>
-            </div>
-            <div class="form-group">
-              <label class="text-white" for="drink">Number of Drinks:</label>
-              <input type="number" class="form-control" id="userDrinks" placeholder="Number of drinks you've had." name="drink" required>
-              <div class="valid-feedback">Valid.</div>
-              <div class="invalid-feedback">Please enter a number.</div>
-            </div>
-            <div class="form-group">
-              <label class="text-white" for="time">Minutes Since Your First Drink:</label>
-              <input type="number" class="form-control" id="userTime" placeholder="Enter the number in minutes since you had your first drink." name="userTime" required>
-              <div class="valid-feedback">Valid.</div>
-              <div class="invalid-feedback">Please enter a number.</div>
-            </div>
-            <div class="form-check">
-              <label class="form-check-label, text-white">
-                <input type="radio" class="form-check-input" id="radioMale" name="optradio">Use the formula for male bodies.
-              </label>
-            </div>
-            <div class="form-check">
-              <label class="form-check-label, text-white">
-                <input type="radio" class="form-check-input" id="radioFemale" name="optradio">
-                Use the formula for female bodies.
-              </label>
-            </div>
-            <button type="submit" id="sub-button" class="btn btn-primary">See your result</button>
-          </form>
-
-            <div id=ok>
-              <h2> your bac is <span class="bac"></span>. you can drive </h2>
-              <button id="reset-btn" type="button" value="Reset" onClick="location.href=location.href" class="btn btn-primary">Try Again!</button>
-            </div>
-
-            <div id=notok>
-              <h2> your bac is <span class="bac"></span>. you can not drive </h2>
-              <button id="reset-btn" type="button" value="Reset" onClick="location.href=location.href" class="btn btn-primary">Try Again!</button>
-            </div>
-
-          </form>
-        </form>
-      </div>
     </div>
-  </header>
+    <div class="jumbotron">
+      <h3>Directions</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+    </div>
+    <div id="survey-box">
+    <form id="survey">
+      <div class="form-group">
+        <label for="userName">Name:</label>
+        <input type="text" class="form-control" id="userName" placeholder="Your first name" name="uname" required>
+        <div class="valid-feedback">Valid.</div>
+        <div class="invalid-feedback">Enter your name</div>
+      </div>
+      <div class="form-group">
+        <label for="userWeight">Weight:</label>
+        <input type="number" class="form-control" id="userWeight" placeholder="Your weight in pounds" name="weight" width="30" required>
+        <div class="valid-feedback">Valid.</div>
+        <div class="invalid-feedback">Please enter a number</div>
+      </div>
+      <div class="form-group">
+        <label for="drink">Number of Drinks:</label>
+        <input type="number" class="form-control" id="userDrinks" placeholder="Number of drinks you've had." name="drink" required>
+        <div class="valid-feedback">Valid.</div>
+        <div class="invalid-feedback">Please enter a number.</div>
+      </div>
+      <div class="form-group">
+        <label for="time">Minutes Since Your First Drink:</label>
+        <input type="number" class="form-control" id="userTime" placeholder="Enter the number in minutes since you had your first drink." name="userTime" required>
+        <div class="valid-feedback">Valid.</div>
+        <div class="invalid-feedback">Please enter a number.</div>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input type="radio" class="form-check-input" id="radioMale" name="optradio">Use the formula for male bodies.
+        </label>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input type="radio" class="form-check-input" id="radioFemale" name="optradio">
+          Use the formula for female bodies.
+        </label>
+      </div>
+      <button type="submit" id="sub-button" class="btn btn-primary">See your result</button>
+    </form>
+  </div>
+
+    <div id=ok>
+      <img src="https://picsum.photos/id/400/1200/400" alt="You can drive.">
+      <h2>Your calculated blood alchohol content is <span class="bac"></span>. You are under the legal limit to drive.</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+      <button id="reset-btn" type="button" value="Reset" onClick="location.href=location.href" class="btn btn-primary">Try Again!</button>
+    </div>
+
+    <div id=notok>
+      <img src="https://picsum.photos/id/400/1200/400" alt="You can drive.">
+      <h2>Your calculated blood alchohol content is <span class="bac"></span>. You are over the legal limit to drive.</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+      <button id="reset-btn" type="button" value="Reset" onClick="location.href=location.href" class="btn btn-primary">Try Again!</button>
+    </div>
+
+
 
   <!-- Footer -->
-  <footer class="bg-black small text-center text-white-100">
-    <div class="container">
+
+    <div class="footer">
       Copyright &copy; Kickass Industries, LLC 2019
     </div>
-  </footer>
+  </div>
 
 </body>
 
