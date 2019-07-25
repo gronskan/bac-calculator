@@ -46,5 +46,4 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 + choose fonts
 + choose text colors for header
-+ figure out how to make form fields required
 + finalize button colors
