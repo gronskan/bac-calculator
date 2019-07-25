@@ -11,7 +11,6 @@ var user = {
 var updateUser = function() {
   if (document.getElementById("radioMale").checked = true) {
     user.userFemale = false;
-  } else {
   };
 };
 
