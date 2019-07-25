@@ -19,6 +19,14 @@ body {
 
 }
 
+#slogan {
+  margin-bottom: 15px;
+}
+
+#directions {
+  margin-top: 50px;
+}
+
 #ok {
   display: none;
 }
