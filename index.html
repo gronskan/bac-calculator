@@ -7,188 +7,93 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-
   <title>Quick BAC Calculator</title>
-
-  <!-- Bootstrap core CSS -->
+  <link rel="icon" type="image/png" href="img/icon.ico">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-  <!-- Bootstrap core JavaScript -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-  <!-- Plugin JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-
-  <!-- Custom scripts for this template -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/startbootstrap-grayscale/5.0.8/js/grayscale.js"></script>
-
-  <!-- Custom fonts for this template -->
-  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-
-  <!-- Custom styles for this template -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/startbootstrap-grayscale/5.0.8/css/grayscale.css" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <script type="text/javascript" src="js/scripts.js"></script>
 
 </head>
 
-<body id="page-top">
-
-  // <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">Oregon DMV</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        Menu
-        <i class="fas fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#projects">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#projects">Rule book</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Header -->
-  <header class="masthead">
-    <div class="container d-flex h-100 align-items-center">
-      <div class="mx-auto text-left">
-        <h1 class="mx-auto my-0 text-uppercase">Quick BAC Calculator</h1>
-        <h2 class="text-white-50 mx-auto mt-2 mb-5">"Definition: Blood alcohol concentration (BAC) is the amount of alcohol in an individual's body, measured by the weight of the alcohol in a volume of blood. ... This program summarizes some of the effects that may be seen based on the calculated blood alcohol concentration."</h2>
-          <form id="survey">
-            <div class="form-group">
-              <label class="text-white" for="userName">Name:</label>
-              <input type="text" class="form-control" id="userName" placeholder="Your first name" name="uname" required>
-              <div class="valid-feedback">Valid.</div>
-              <div class="invalid-feedback">Enter your name</div>
-            </div>
-            <div class="form-group">
-              <label class="text-white" for="userWeight">Weight:</label>
-              <input type="number" class="form-control" id="userWeight" placeholder="Your weight in pounds" name="weight" width="30" required>
-              <div class="valid-feedback">Valid.</div>
-              <div class="invalid-feedback">Please enter a number</div>
-            </div>
-            <div class="form-group">
-              <label class="text-white" for="drink">Number of Drinks:</label>
-              <input type="number" class="form-control" id="userDrinks" placeholder="Number of drinks you've had." name="drink" required>
-              <div class="valid-feedback">Valid.</div>
-              <div class="invalid-feedback">Please enter a number.</div>
-            </div>
-            <div class="form-group">
-              <label class="text-white" for="time">Minutes Since Your First Drink:</label>
-              <input type="number" class="form-control" id="userTime" placeholder="Enter the number in minutes since you had your first drink." name="userTime" required>
-              <div class="valid-feedback">Valid.</div>
-              <div class="invalid-feedback">Please enter a number.</div>
-            </div>
-            <div class="form-check">
-              <label class="form-check-label, text-white">
-                <input type="radio" class="form-check-input" id="radioMale" name="optradio">Use the formula for male bodies.
-              </label>
-            </div>
-            <div class="form-check">
-              <label class="form-check-label, text-white">
-                <input type="radio" class="form-check-input" id="radioFemale" name="optradio">
-                Use the formula for female bodies.
-              </label>
-            </div>
-            <button type="submit" id="sub-button" class="btn btn-primary">See your result</button>
-          </form>
-
-            <div id=ok>
-              <h2> your bac is <span id="bac"></span>. you can drive </h2>
-              <button id="reset-btn" type="button" value="Reset" onClick="location.href=location.href" class="btn btn-primary">Try Again!</button>
-            </div>
-
-            <div id=notok>
-              <h2> your bac is <span id="bac"></span>. you can not drive </h2>
-              <button id="reset-btn" type="button" value="Reset" onClick="location.href=location.href" class="btn btn-primary">Try Again!</button>
-            </div>
-
-          </form>
-        </form>
-      </div>
-    </div>
-  </header>
-
-  <!-- About Section -->
-  <section id="about" class="about-section text-center">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 mx-auto">
-          <h2 class="text-white mb-4">Built to calculate your blood alcohol level.</h2>
-          <p class="text-white-50">blahblah
-            <a href="http://startbootstrap.com/template-overviews/grayscale/">the preview page for chart</a> </p> -->
-        </div>
-      </div>
-      <img src="img/image2.jpeg" class="img-fluid" alt="">
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="projects-section bg-light">
-    <div class="container">
-
-
-
-      <!-- Project One Row -->
-      <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
-        <div class="col-lg-6">
-          <img class="img-fluid" src="img/icon1.jpg" alt="">
-        </div>
-        <div class="col-lg-6">
-          <div class="bg-black text-center h-100 project">
-            <div class="d-flex h-100">
-              <div class="project-text w-100 my-auto text-center text-lg-left">
-                <h4 class="text-white">Drinking and Driving (DUI)</h4>
-                <p class="mb-0 text-white-50">n the United States, roughly 28 people die every day in motor vehicle crashes that involve an alcohol-impaired driver. In 2014, nearly 10,000 Americans were killed in alcohol-impaired driving crashes.
-                  Alcohol-related accidents accounted for nearly one-third of all traffic-related deaths.<a href="https://www.alcoholrehabguide.org/alcohol/crimes/dui/">look here.....</a></p>
-                <hr class="d-none d-lg-block mb-0 ml-0">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project Two Row -->
-      <div class="row justify-content-center no-gutters">
-        <div class="col-lg-6">
-          <img class="img-fluid" src="img/drunk1.jpg" alt="">
-        </div>
-        <div class="col-lg-6 order-lg-first">
-          <div class="bg-black text-center h-100 project">
-            <div class="d-flex h-100">
-              <div class="project-text w-100 my-auto text-center text-lg-right">
-                <h4 class="text-white"> DrivingLaw book</h4>
-                <p class="mb-0 text-white-50">Drinking alcohol leads to a loss of coordination, poor judgment, slowed reflexes, distorted vision, memory lapses, and even blackouts. Alcohol can damage every organ in your body. It is absorbed directly
-                  into your bloodstream and can increase your risk for a variety of life-threatening diseases, including cancer<a href="https://dui.drivinglaws.org/oregon.php">look here.....</a></p>
-                <hr class="d-none d-lg-block mb-0 mr-0">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+<body>
+  <div class="container">
+    <div class="jumbotron jumbo-header">
+      <h1>Quick BAC Calculator</h1>
 
     </div>
-  </section>
+    <div class="jumbotron">
+      <h2 id=slogan>Are You Good To Drive?</h2>
+      <h4>Use the BAC calculator to find out just how much... <em><strong>is too much.</strong></em></h4>
+      <h5 id=directions>Directions</h5>
+      <p>Fill out the form below and click the submit button to find out your BAC level. Your BAC, or blood alcohol concentration, is an estimate of how much alcohol is in your system and provides a reference to how intoxicated you may be. For calculation purposes, one drink will be equal to a 1.5 oz shot of 80 proof liquor, a 12 oz glass of 5% beer, or a 5 oz glass of 12% wine.</p>
+    </div>
+    <div id="survey-box">
+    <form id="survey">
+      <div class="form-group">
+        <label for="userName">Name:</label>
+        <input type="text" class="form-control" id="userName" placeholder="Your first name" name="uname" required>
+        <div class="valid-feedback">Valid.</div>
+        <div class="invalid-feedback">Enter your name</div>
+      </div>
+      <div class="form-group">
+        <label for="userWeight">Weight:</label>
+        <input type="number" class="form-control" id="userWeight" placeholder="Your weight in pounds" name="weight" width="30" required>
+        <div class="valid-feedback">Valid.</div>
+        <div class="invalid-feedback">Please enter a number</div>
+      </div>
+      <div class="form-group">
+        <label for="drink">Number of Drinks:</label>
+        <input type="number" class="form-control" id="userDrinks" placeholder="Number of drinks you've had." name="drink" required>
+        <div class="valid-feedback">Valid.</div>
+        <div class="invalid-feedback">Please enter a number.</div>
+      </div>
+      <div class="form-group">
+        <label for="time">Minutes Since Your First Drink:</label>
+        <input type="number" class="form-control" id="userTime" placeholder="Enter the number in minutes since you had your first drink." name="userTime" required>
+        <div class="valid-feedback">Valid.</div>
+        <div class="invalid-feedback">Please enter a number.</div>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input type="radio" class="form-check-input" id="radioMale" name="optradio">Use the formula for male bodies.
+        </label>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input type="radio" class="form-check-input" id="radioFemale" name="optradio">
+          Use the formula for female bodies.
+        </label>
+      </div>
+      <button type="submit" id="sub-button" class="btn btn-warning">Can I Drive?</button>
+    </form>
+  </div>
+
+    <div id=ok>
+      <img src="https://picsum.photos/id/400/1200/400" alt="You can drive.">
+      <h2>Your calculated blood alchohol content is <span class="bac"></span>.</h2>
+      <p>Congratuations! You are under the legal limit to drive. But remember this is just an estimate and shouldn't be your only factor in deciding to drive. Everyones body processes alcohol differently and other factors could contribute towards your impairment. Use your best judgement and remember to drive safe.</p>
+      <button id="reset-btn" type="button" value="Reset" onClick="location.href=location.href" class="btn btn-primary">Try Again!</button>
+    </div>
+
+    <div id=notok>
+      <img src="https://picsum.photos/id/400/1200/400" alt="You can not drive.">
+      <h2>Your calculated blood alchohol content is <span class="bac"></span>.</h2>
+      <p>Sorry, but you are over the legal limit to drive. It is recomended that you find either a desgnated driver, or transportation service, such as Uber, Lyft, or even a taxi.</p>
+      <button id="reset-btn" type="button" value="Reset" onClick="location.href=location.href" class="btn btn-primary">Try Again!</button>
+    </div>
+
+
 
   <!-- Footer -->
-  <footer class="bg-black small text-center text-white-100">
-    <div class="container">
+
+    <div class="footer">
       Copyright &copy; Kickass Industries, LLC 2019
     </div>
-  </footer>
+  </div>
 
 </body>
 
