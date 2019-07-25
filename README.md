@@ -2,6 +2,8 @@
 
 Our project was to create a site that allows a user to input the amount of alcohol they've had to drink and returns the user's calculated blood alcohol content (BAC) percentage, and whether they are below or above the legal limit to drive.
 
+[Link to Github Pages](https://gronskan.github.io/bac-calculator/)
+
 ## Disclaimer
 
 **This entire site is a learning project. Please do not use this site to decide whether to drive.**
